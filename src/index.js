@@ -4,12 +4,12 @@ var net = require('net');
 
 var server = dgram.createSocket('udp4')
 
+var output = zlib.createGzip()
+.pipe(net.connect(8080, 'localhost'));
+
 server
 .on("message", function(msg) {
-   console.log(msg.toString("utf8"));
+   output.write(msg);
 });
-
-//.pipe(zlib.createGzip())
-//.pipe(net.connect(1010, 'localhost'));
 
 server.bind(5140);
