@@ -8,9 +8,7 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "datagram-stream": "1.0.x"
-  },
+  "dependencies": {},
   "devDependencies": {
     "mocha": "2.3.x",
     "unit.js": "2.0.x"

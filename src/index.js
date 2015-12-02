@@ -1,10 +1,15 @@
-var udp = require('datagram-stream');
+var zlib = require('zlib');
+var dgram = require('dgram');
+var net = require('net');
 
-var stream = udp({
-    address: '0.0.0.0',
-    unicast: '127.0.0.1',
-    port: 5140,
-    reuseAddr: true
+var server = dgram.createSocket('udp4')
+
+server
+.on("message", function(msg) {
+   console.log(msg.toString("utf8"));
 });
 
-stream.pipe(process.stdout);
+//.pipe(zlib.createGzip())
+//.pipe(net.connect(1010, 'localhost'));
+
+server.bind(5140);
