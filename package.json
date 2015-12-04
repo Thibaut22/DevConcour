@@ -1,0 +1,16 @@
+{
+  "name": "greencesi",
+  "version": "0.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "mocha --recursive"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "2.3.x",
+    "unit.js": "2.0.x"
+  }
+}
